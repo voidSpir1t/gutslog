@@ -1,0 +1,108 @@
+{
+    "common": {
+        "save": "保存",
+        "back": "返回",
+        "delete": "删除",
+        "deletehistory": "删除记录",
+        "confirmDelete": "确认删除?",
+        "finish": "记录训练",
+        "new": "新建",
+        "edit": "编辑",
+        "export": "导出为图片",
+        "strength": "新建无氧",
+        "cardio": "新建有氧",
+        "start": "开始"
+    },
+    "home": {
+        "title": "GymLog",
+        "subtitle": "跟踪记录你的进步",
+        "myTemplates": "我的模板",
+        "noTemplates": "",
+        "exercisesCount": "{{count}} 个动作"
+    },
+    "editor": {
+        "newTemplate": "新建模板",
+        "editTemplate": "编辑模板",
+        "templateName": "模板名称",
+        "placeholderName": "例如：推力日",
+        "exercises": "训练",
+        "exerciseName": "动作名称",
+        "reps": "次数",
+        "weight": "重量 (kg)"
+    },
+    "workout": {
+        "title": "进行中",
+        "addSet": "+ 添加组",
+        "set": "组",
+        "weight": "重量",
+        "reps": "次数",
+        "note": "备注...",
+        "incline": "坡度",
+        "pace": "配速",
+        "time": "时间",
+        "distance": "距离(km)"
+    },
+    "history": {
+        "title": "训练记录",
+        "noHistory": "还没有训练记录。",
+        "setsCount": "{{count}} 组"
+    },
+    "nav": {
+        "newWorkout": "开始",
+        "home": "模板",
+        "history": "历史"
+    },
+    "inherit": {
+        "title": "继承上次训练数据",
+        "all": "全部继承",
+        "weight": "仅重量",
+        "reps": "仅次数",
+        "none": "不继承"
+    },
+    "share": {
+        "title": "分享设置",
+        "darkMode": "深色模式",
+        "showTimeline": "显示时间轴",
+        "showNotes": "显示备注",
+        "showDetails": "显示动作细节",
+        "showBody": "显示肌肉图",
+        "download": "生成并保存图片"
+    },
+    "muscles": {
+        "title": "主要肌肉群",
+        "chest": "胸部",
+        "abs": "腹部",
+        "back": "背部",
+        "shoulders": "肩部",
+        "biceps": "二头肌",
+        "triceps": "三头肌",
+        "forearm": "前臂",
+        "quadriceps": "股四头肌",
+        "hamstrings": "腘绳肌",
+        "gluteal": "臀部",
+        "calves": "小腿",
+        "trapezius": "斜方肌",
+        "obliques": "侧腹(斜肌)",
+        "upper-back": "上背部",
+        "lower-back": "下背部",
+        "deltoids": "三角肌",
+        "gender": "性别",
+        "side": "视角",
+        "male": "男",
+        "female": "女",
+        "front": "正面",
+        "back_view": "背面",
+        "neck": "颈部",
+        "adductors": "内收肌",
+        "tibialis": "胫骨前肌",
+        "knees": "膝盖",
+        "hands": "手部",
+        "ankles": "脚踝",
+        "feet": "足部",
+        "head": "头部",
+        "hair": "头发",
+        "upper_body": "上身与核心",
+        "arms_shoulders": "手臂与肩膀",
+        "lower_body": "下肢与臀部"
+    }
+}

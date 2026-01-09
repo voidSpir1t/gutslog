@@ -1,0 +1,102 @@
+{
+    "common": {
+        "save": "Save",
+        "back": "Back",
+        "delete": "Delete",
+        "confirmDelete": "Confirm delete?",
+        "finish": "Record Workout",
+        "new": "New",
+        "edit": "Edit",
+        "export": "Export to Image",
+        "strength": "New Strength",
+        "cardio": "New Cardio",
+        "start": "Start",
+        "showDetails": "Show Details",
+        "showBody": "Show Muscle Map"
+    },
+    "home": {
+        "title": "Templates",
+        "subtitle": "Manage your training plans",
+        "myTemplates": "My Templates",
+        "noTemplates": "",
+        "exercisesCount": "{{count}} exercises"
+    },
+    "editor": {
+        "newTemplate": "New Template",
+        "editTemplate": "Edit Template",
+        "templateName": "Template Name",
+        "placeholderName": "e.g. Push Day",
+        "exercises": "Exercises",
+        "exerciseName": "Exercise name",
+        "reps": "Reps",
+        "weight": "Weight (kg)"
+    },
+    "workout": {
+        "title": "Training",
+        "addSet": "+ Add Set",
+        "set": "Set",
+        "all": "Inherit All",
+        "weight": "Weight Only",
+        "reps": "Reps Only",
+        "none": "Do Not Inherit",
+        "note": "Set note...",
+        "incline": "Incl.",
+        "pace": "Pace",
+        "time": "Time",
+        "distance": "Dist."
+    },
+    "history": {
+        "title": "Workout History",
+        "noHistory": "No workouts recorded yet.",
+        "setsCount": "{{count}} sets"
+    },
+    "nav": {
+        "newWorkout": "Start",
+        "home": "Templates",
+        "history": "History"
+    },
+    "inherit": {
+        "title": "Inherit from last session",
+        "all": "Inherit Both",
+        "weight": "Weight Only",
+        "reps": "Reps Only",
+        "none": "None"
+    },
+    "muscles": {
+        "title": "Muscle Groups",
+        "chest": "Chest",
+        "abs": "Abs",
+        "back": "Back",
+        "shoulders": "Shoulders",
+        "biceps": "Biceps",
+        "triceps": "Triceps",
+        "forearm": "Forearms",
+        "quadriceps": "Quads",
+        "hamstrings": "Hamstrings",
+        "gluteal": "Glutes",
+        "calves": "Calves",
+        "trapezius": "Traps",
+        "obliques": "Obliques",
+        "upper-back": "Upper Back",
+        "lower-back": "Lower Back",
+        "deltoids": "Deltoids",
+        "gender": "Gender",
+        "side": "View",
+        "male": "Male",
+        "female": "Female",
+        "front": "Front",
+        "back_view": "Back",
+        "neck": "Neck",
+        "adductors": "Adductors",
+        "tibialis": "Tibialis",
+        "knees": "Knees",
+        "hands": "Hands",
+        "ankles": "Ankles",
+        "feet": "Feet",
+        "head": "Head",
+        "hair": "Hair",
+        "upper_body": "Upper Body & Core",
+        "arms_shoulders": "Arms & Shoulders",
+        "lower_body": "Legs & Glutes"
+    }
+}
