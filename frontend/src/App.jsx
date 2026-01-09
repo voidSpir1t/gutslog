@@ -880,7 +880,7 @@ const TemplateEditor = ({ template, templates, onSave, onDelete, onBack, setConf
         </div>
 
         {exercises.map((ex, index) => (
-          <div key={ex.id} className="glass card" style={{ padding: '1rem', borderTop: `2px solid ${ex.category === 'Cardio' ? '#3b82f6' : color}`, overflow: 'visible' }}>
+          <div key={ex.id} className="glass card" style={{ padding: '1rem', borderTop: `2px solid ${ex.category === 'Cardio' ? '#3b82f6' : color}`, overflow: 'hidden' }}>
             <div style={{ fontSize: '0.7rem', textTransform: 'uppercase', opacity: 0.5, marginBottom: '0.5rem', color: ex.category === 'Cardio' ? '#3b82f6' : color, fontWeight: '800' }}>
               {ex.category || 'Strength'}
             </div>
