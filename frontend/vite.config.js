@@ -14,7 +14,7 @@ export default defineConfig({
         name: 'GutsLog - Liquid Glass Fitness',
         short_name: 'GutsLog',
         description: 'Offline-first fitness tracker with liquid glass aesthetics',
-        theme_color: '#0ea5e9',
+        theme_color: '#000000',
         background_color: '#000000',
         display: 'standalone',
         start_url: '/gutslog/',
