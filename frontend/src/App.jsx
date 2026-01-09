@@ -23,6 +23,23 @@ import { dbGetAll, dbPut, dbDelete, dbSaveAll } from './utils/db';
 import { getTemplates as getOldTemplates, getSessions as getOldSessions } from './utils/storage';
 import Body from '@mjcdev/react-body-highlighter';
 
+const MaleSymbol = ({ size = 20 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="9" cy="15" r="5" />
+    <path d="M13 11l6-6" />
+    <path d="M19 5h-5" />
+    <path d="M19 5v5" />
+  </svg>
+);
+
+const FemaleSymbol = ({ size = 20 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="10" r="5" />
+    <path d="M12 15v6" />
+    <path d="M9 18h6" />
+  </svg>
+);
+
 const App = () => {
   const { t, i18n } = useTranslation();
   const [view, setView] = useState('HISTORY'); // HOME, EDIT_TEMPLATE, WORKOUT, HISTORY
@@ -250,9 +267,9 @@ const App = () => {
             className="btn-ghost"
             onClick={() => setUserGender(userGender === 'male' ? 'female' : 'male')}
             title={`Gender: ${userGender}`}
-            style={{ fontSize: '0.8rem', fontWeight: 'bold' }}
+            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: userGender === 'male' ? '#60a5fa' : '#f472b6' }}
           >
-            {userGender === 'male' ? 'M' : 'F'}
+            {userGender === 'male' ? <MaleSymbol size={22} /> : <FemaleSymbol size={22} />}
           </button>
           <button className="btn-ghost" onClick={toggleTheme} title={`Theme: ${themeMode}`}>
             {themeMode === 'auto' && <SunMoon size={20} />}
