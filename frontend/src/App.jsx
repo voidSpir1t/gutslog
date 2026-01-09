@@ -660,40 +660,40 @@ const TemplateEditor = ({ template, templates, onSave, onDelete, onBack, setConf
         <button className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem' }} onClick={() => onSave({ ...template, name, exercises, category, color, muscles: activeMuscles })}>{t('common.save')}</button>
       </header>
 
-      <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', marginBottom: '3rem' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'flex-start', marginBottom: '3rem' }}>
         {/* Left Side: Compact Muscle Visualizer */}
         <div style={{
           display: 'flex',
           gap: '1rem',
           background: 'rgba(255,255,255,0.02)',
-          padding: '1.5rem',
+          padding: '1rem', // Reduced padding
           borderRadius: '20px',
           alignItems: 'center'
         }}>
           <div style={{ textAlign: 'center' }}>
             {/* <div style={{ fontSize: '0.6rem', opacity: 0.3, marginBottom: '0.5rem', textTransform: 'uppercase' }}>{t('muscles.front')}</div> */}
-            <div style={{ position: 'relative', width: '60px', height: '110px', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ position: 'relative', width: '50px', height: '100px', display: 'flex', justifyContent: 'center' }}>
               <div style={{ position: 'absolute', opacity: 0.15 }}>
-                <Body data={[]} colors={['rgba(255, 255, 255, 0.2)', 'transparent']} gender={userGender} side="front" scale={0.5} />
+                <Body data={[]} colors={['rgba(255, 255, 255, 0.2)', 'transparent']} gender={userGender} side="front" scale={0.45} />
               </div>
               <div style={{ position: 'absolute', opacity: 1 }}>
                 <Body
                   data={activeMuscles.filter(m => ['abs', 'adductors', 'ankles', 'biceps', 'calves', 'chest', 'deltoids', 'feet', 'forearm', 'gluteal', 'hair', 'hamstring', 'hands', 'knees', 'lower-back', 'neck', 'obliques', 'quadriceps', 'tibialis', 'trapezius', 'triceps', 'upper-back'].includes(m)).map(m => ({ slug: m, intensity: 1 }))}
-                  colors={[color, color]} gender={userGender} side="front" scale={0.5}
+                  colors={[color, color]} gender={userGender} side="front" scale={0.45}
                 />
               </div>
             </div>
           </div>
           <div style={{ textAlign: 'center' }}>
             {/* <div style={{ fontSize: '0.6rem', opacity: 0.3, marginBottom: '0.5rem', textTransform: 'uppercase' }}>{t('muscles.back_view')}</div> */}
-            <div style={{ position: 'relative', width: '60px', height: '110px', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ position: 'relative', width: '50px', height: '100px', display: 'flex', justifyContent: 'center' }}>
               <div style={{ position: 'absolute', opacity: 0.15 }}>
-                <Body data={[]} colors={['rgba(255, 255, 255, 0.2)', 'transparent']} gender={userGender} side="back" scale={0.5} />
+                <Body data={[]} colors={['rgba(255, 255, 255, 0.2)', 'transparent']} gender={userGender} side="back" scale={0.45} />
               </div>
               <div style={{ position: 'absolute', opacity: 1 }}>
                 <Body
                   data={activeMuscles.filter(m => ['abs', 'adductors', 'ankles', 'biceps', 'calves', 'chest', 'deltoids', 'feet', 'forearm', 'gluteal', 'hair', 'hamstring', 'hands', 'knees', 'lower-back', 'neck', 'obliques', 'quadriceps', 'tibialis', 'trapezius', 'triceps', 'upper-back'].includes(m)).map(m => ({ slug: m, intensity: 1 }))}
-                  colors={[color, color]} gender={userGender} side="back" scale={0.5}
+                  colors={[color, color]} gender={userGender} side="back" scale={0.45}
                 />
               </div>
             </div>
@@ -701,7 +701,7 @@ const TemplateEditor = ({ template, templates, onSave, onDelete, onBack, setConf
         </div>
 
         {/* Right Side: Form Controls */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        <div style={{ flex: 1, minWidth: '280px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {/* Template Name */}
           <div>
             <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.8rem' }}>{t('editor.templateName')}</label>
