@@ -103,7 +103,7 @@ const App = () => {
 
   const handleCreateTemplate = (category = 'Default', color = '#8b5cf6') => {
     setCurrentTemplate({
-      id: Date.now(),
+      id: null, // New template has no ID initially
       name: '',
       exercises: [],
       category: category,
@@ -129,10 +129,14 @@ const App = () => {
   };
 
   const handleSaveTemplate = async (updatedTemplate) => {
-    await dbPut('templates', updatedTemplate);
-    const newTemplates = templates.find(t => t.id === updatedTemplate.id)
-      ? templates.map(t => t.id === updatedTemplate.id ? updatedTemplate : t)
-      : [updatedTemplate, ...templates];
+    const templateToSave = {
+      ...updatedTemplate,
+      id: updatedTemplate.id || Date.now()
+    };
+    await dbPut('templates', templateToSave);
+    const newTemplates = templates.find(t => t.id === templateToSave.id)
+      ? templates.map(t => t.id === templateToSave.id ? templateToSave : t)
+      : [templateToSave, ...templates];
     setTemplates(newTemplates);
     setView('HOME');
   };
@@ -660,7 +664,7 @@ const TemplateEditor = ({ template, templates, onSave, onDelete, onBack, setConf
         <button className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem' }} onClick={() => onSave({ ...template, name, exercises, category, color, muscles: activeMuscles })}>{t('common.save')}</button>
       </header>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'flex-start', marginBottom: '3rem' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', justifyContent: 'center', marginBottom: '3rem' }}>
         {/* Left Side: Compact Muscle Visualizer */}
         <div style={{
           display: 'flex',
