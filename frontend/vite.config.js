@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/gutslog/',
   plugins: [
     react(),
     VitePWA({
@@ -17,8 +17,8 @@ export default defineConfig({
         theme_color: '#0ea5e9',
         background_color: '#000000',
         display: 'standalone',
-        start_url: '/',
-        scope: '/',
+        start_url: '/gutslog/',
+        scope: '/gutslog/',
         icons: [
           {
             src: 'icon-192.png',
